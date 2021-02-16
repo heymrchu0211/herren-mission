@@ -49,34 +49,38 @@
 
 <body>
   <div class="user-menu-area">
-    <a class="user-menu-area__link-store" href="">공비서 스토어</a>
-    <ul class="user-menu-area__list">
-      <li>
-        <a href="">마이페이지(샵주)</a>
-      </li>
-      <li>
-        <a href="">이용권정보</a>
-      </li>
-      <li>
-        <a href="">로그아웃</a>
-      </li>
-      <li>
-        <a href="">알림</a>
-      </li>
-    </ul>
+    <div class="user-menu-area__inner">
+      <a class="user-menu-area__link-store" href="">공비서 스토어</a>
+      <ul class="user-menu-area__list">
+        <li class="user-menu-area__item">
+          <a href="">마이페이지(샵주)</a>
+        </li>
+        <li class="user-menu-area__item user-menu-area__item--pass">
+          <a href="">이용권정보</a>
+        </li>
+        <li class="user-menu-area__item">
+          <a href="">로그아웃</a>
+        </li>
+        <li class="user-menu-area__item user-menu-area__item--news">
+          <a href="">알림</a>
+        </li>
+      </ul>
+    </div>
   </div>
   <div class="content-area">
     <div class="content-area__inner">
       <header class="header">
+        <a class="header__gongbiz" href="">공대남의 비즈니스 서비스</a>
         <div class="header__info">
-          <a href="">공대남의 비즈니스 서비스</a>
-          <a class="header__owner-name" href="">
-            <strong>헤렌테스트</strong>
-          </a>
-          <dl>
-            <dt>점주</dt>
-            <dd>테스트</dd>
-          </dl>
+          <div class="header__owner-wrap">
+            <a class="header__shop-name" href="">
+              <strong>헤렌테스트</strong>
+            </a>
+            <dl class="header__owner-name">
+              <dt>점주</dt>
+              <dd>테스트</dd>
+            </dl>
+          </div>
           <a class="header__staff-wrap" href="">
             <span>직원</span>
             <ul class="header__staff-list">
