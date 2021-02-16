@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!-- 해당 웹페이지가 HTML5 표준을 따른다는 뜻-->
+<html lang="ko">
+<!-- 화면 낭독기 (스크린 리더 등의 보조기기)가 해당 언어를 인식하고 자동으로 음성을 변환하고 해당 언어에 적합한 발음을 제공할 수 있도록 lang속성값을 명시해줘야 함(한국형 웹 컨텐츠 접근성 지침) -->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 웹페이지의 텍스트를 출력할때 사용할 인코딩 방식을 정의 , UTF-8은 모든 언어의 문자를 지원하는 인코딩 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 뷰포트(화면에 보여지는 영역)를 디바이스의 너비에 따라 설정한다는 뜻 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 구형 IE의 대응을 위한것으로 해당 웹페이지를 최신 표준모드로 해석하라는 뜻 -->
+  <meta name="robots" content="index, follow">
+  <!-- index는 검색로봇이 해당 웹페이지를 수집 대상으로 한다는 뜻, follow는 해당 웹페이지와 함께 링크가 걸린 곳을 수집한다는 뜻 -->
+  <title>공비서 - 회원/매출/고객관리 프로그램(네일샵, 미용실 등)</title>
+  <!-- 브라우저의 제목 표시줄에 출력되는 웹페이지의 제목-->
+
+  <!-- google webfont cdn -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap">
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+  <!-- description -->
+  <meta name="author" content="김춘영">
+  <!-- 웹페이지의 저자 -->
+  <meta name="description" content="샵 고객관리 서비스를 제공하는 공비서입니다.">
+  <!-- 검색 결과에 표시되는 단어 -->
+  <meta name="keywords" content="공비서,회원관리,매출관리,고객관리,뷰티서비스,교육서비스">
+  <!-- 검색 엔진에 의해 검색되는 단어 -->
+
+  <!-- facebook open graph meta tags 페이스북이나 카카오톡에서 링크를 공유 받을때 해당 웹페이지의 이미지와 제목 등을 미리보기 할 수 있도록 함 -->
+  <meta property="og:title" content="공비서 - 고객관리 서비스">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.gongbiz.kr/art">
+  <meta property="og:description" content="샵 고객관리 서비스를 제공하는 공비서입니다.">
+
+  <link rel="stylesheet" href="scss/reset.css">
+  <link rel="stylesheet" href="scss/common.css">
+  <link rel="stylesheet" href="scss/style.css">
+</head>
+
+<body>
+  <div class="user-menu-area">
+    <a class="user-menu-area__link-store" href="">공비서 스토어</a>
+    <ul class="user-menu-area__list">
+      <li>
+        <a href="">마이페이지(샵주)</a>
+      </li>
+      <li>
+        <a href="">이용권정보</a>
+      </li>
+      <li>
+        <a href="">로그아웃</a>
+      </li>
+      <li>
+        <a href="">알림</a>
+      </li>
+    </ul>
+  </div>
+  <div class="content-area">
+    <div class="content-area__inner">
+      <header class="header">
+        <div class="header__info">
+          <a href="">공대남의 비즈니스 서비스</a>
+          <a class="header__owner-name" href="">
+            <strong>헤렌테스트</strong>
+          </a>
+          <dl>
+            <dt>점주</dt>
+            <dd>테스트</dd>
+          </dl>
+          <a class="header__staff-wrap" href="">
+            <span>직원</span>
+            <ul class="header__staff-list">
+              <li class="header__staff-item">
+                <span class="blind">직원 이미지</span>
+              </li>
+              <li class="header__staff-item">
+                <span class="blind">직원 이미지</span>
+              </li>
+              <li class="header__staff-item">
+                <span class="blind">직원 이미지</span>
+              </li>
+            </ul>
+            <span>0</span>
+          </a>
+        </div>
+        <nav class="header__nav">
+          <a class="header__nav-album" href="">우리샵 앨범</a>
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="">예약</a>
+              <ul>
+                <li>
+                  <a href="">예약 캘린더</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__nav-item">
+              <a href="">매출관리</a>
+              <ul>
+                <li>
+                  <a href="">매출 등록/목록</a>
+                </li>
+                <li>
+                  <a href="">우리샵 매출</a>
+                </li>
+                <li>
+                  <a href="">직원별 매출</a>
+                </li>
+                <li>
+                  <a href="">고객별 매출</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__nav-item">
+              <a href="">고객관리</a>
+              <ul>
+                <li>
+                  <a href="">고객차트</a>
+                </li>
+                <li>
+                  <a href="">회원권/포인트 관리</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__nav-item">
+              <a href="">제품관리</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="">우리샵 관리</a>
+              <ul>
+                <li>
+                  <a href="">시술메뉴</a>
+                </li>
+                <li>
+                  <a href="">포인트/행사</a>
+                </li>
+                <li>
+                  <a href="">직원관리</a>
+                </li>
+                <li>
+                  <a href="">화면 잠금 관리</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__nav-item">
+              <a href="">문자</a>
+              <ul>
+                <li>
+                  <a href="">문자 발송</a>
+                </li>
+                <li>
+                  <a href="">발송 내역</a>
+                </li>
+                <li>
+                  <a href="">문자충전/내역</a>
+                </li>
+                <li>
+                  <a href="">자동문자 설정</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__nav-item">
+              <a href="">부가서비스</a>
+              <ul>
+                <li>
+                  <a href="">네이버예약</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__nav-item header__nav-item--customer">
+              <a href="">고객센터</a>
+              <ul>
+                <li>
+                  <a href="">사용법 안내</a>
+                </li>
+                <li>
+                  <a href="">공지사항</a>
+                </li>
+                <li>
+                  <a href="">이벤트 게시판</a>
+                </li>
+                <li>
+                  <a href="">문의하기</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <a class="header__nav-store" href="">
+            <img src="" alt="">
+          </a>
+        </nav>
+      </header>
+      <main class="main">
+        <h1>우리샵 앨범</h1>
+        <ul class="main__category-list">
+          <li class="main__category-item">
+            <a href="">앨범</a>
+          </li>
+          <li class="main__category-item">
+            <a href="">이달의 아트</a>
+          </li>
+        </ul>
+        <button class="main__btn-new-art" type="button">새로운 아트 등록</button>
+        <div class="main__album-wrap">
+          <ul class="main__album-list">
+            <li class="main__album-item">
+              <figure>
+                <img src="" alt="">
+              </figure>
+              <div class="main__album-description-wrap">
+                <h2>2</h2>
+                <p>1시간 소요</p>
+                <em>12원</em>
+                <em>회원가:12원</em>
+              </div>
+            </li>
+            <li class="main__album-item">
+              <figure>
+                <img src="" alt="">
+              </figure>
+              <div class="main__album-description-wrap">
+                <h2>2</h2>
+                <p>1시간 소요</p>
+                <em>12원</em>
+                <em>회원가:12원</em>
+              </div>
+            </li>
+            <li class="main__album-item">
+              <figure>
+                <img src="" alt="">
+              </figure>
+              <div class="main__album-description-wrap">
+                <h2>2</h2>
+                <p>1시간 소요</p>
+                <em>12원</em>
+                <em>회원가:12원</em>
+              </div>
+            </li>
+            <li class="main__album-item">
+              <figure>
+                <img src="" alt="">
+              </figure>
+              <div class="main__album-description-wrap">
+                <h2>2</h2>
+                <p>1시간 소요</p>
+                <em>12원</em>
+                <em>회원가:12원</em>
+              </div>
+            </li>
+            <li class="main__album-item">
+              <figure>
+                <img src="" alt="">
+              </figure>
+              <div class="main__album-description-wrap">
+                <h2>2</h2>
+                <p>1시간 소요</p>
+                <em>12원</em>
+                <em>회원가:12원</em>
+              </div>
+            </li>
+            <li class="main__album-item">
+              <figure>
+                <img src="" alt="">
+              </figure>
+              <div class="main__album-description-wrap">
+                <h2>2</h2>
+                <p>1시간 소요</p>
+                <em>12원</em>
+                <em>회원가:12원</em>
+              </div>
+            </li>
+            <li class="main__album-item">
+              <figure>
+                <img src="" alt="">
+              </figure>
+              <div class="main__album-description-wrap">
+                <h2>2</h2>
+                <p>1시간 소요</p>
+                <em>12원</em>
+                <em>회원가:12원</em>
+              </div>
+            </li>
+            <li class="main__album-item">
+              <figure>
+                <img src="" alt="">
+              </figure>
+              <div class="main__album-description-wrap">
+                <h2>2</h2>
+                <p>1시간 소요</p>
+                <em>12원</em>
+                <em>회원가:12원</em>
+              </div>
+            </li>
+            <li class="main__album-item">
+              <figure>
+                <img src="" alt="">
+              </figure>
+              <div class="main__album-description-wrap">
+                <h2>2</h2>
+                <p>1시간 소요</p>
+                <em>12원</em>
+                <em>회원가:12원</em>
+              </div>
+            </li>
+            <li class="main__album-item">
+              <figure>
+                <img src="" alt="">
+              </figure>
+              <div class="main__album-description-wrap">
+                <h2>2</h2>
+                <p>1시간 소요</p>
+                <em>12원</em>
+                <em>회원가:12원</em>
+              </div>
+            </li>
+            <li class="main__album-item">
+              <figure>
+                <img src="" alt="">
+              </figure>
+              <div class="main__album-description-wrap">
+                <h2>2</h2>
+                <p>1시간 소요</p>
+                <em>12원</em>
+                <em>회원가:12원</em>
+              </div>
+            </li>
+            <li class="main__album-item">
+              <figure>
+                <img src="" alt="">
+              </figure>
+              <div class="main__album-description-wrap">
+                <h2>2</h2>
+                <p>1시간 소요</p>
+                <em>12원</em>
+                <em>회원가:12원</em>
+              </div>
+            </li>
+          </ul>
+          <div class="main__album-pagination-wrap">
+            <ul class="main__album-pagination__list">
+              <li class="main__album-pagination__item">1</li>
+            </ul>
+            <button class="album-pagination__btn-prev" type="button">
+              <span class="blind">이전 버튼</span>
+            </button>
+            <button class="album-pagination__btn-next" type="button">
+              <span class="blind">다음 버튼</span>
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+
+</html>
