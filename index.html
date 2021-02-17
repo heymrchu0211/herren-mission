@@ -387,6 +387,55 @@
             </li>
           </ul>
           <!-- //main__album-list -->
+          <div class="modal">
+            <div class="modal__contents-box">
+              <h2 class="modal__name">12</h2>
+              <div class="modal__slide-wrap">
+                <ul class="modal__slide-list">
+                  <li class="modal__slide-item">
+                    <img src="images/slide-image1.jpg" alt="첫번째 슬라이드 이미지">
+                  </li>
+                  <li class="modal__slide-item">
+                    <img src="images/slide-image2.jpg" alt="두번째 슬라이드 이미지">
+                  </li>
+                  <li class="modal__slide-item">
+                    <img src="images/slide-image3.jpg" alt="세번째 슬라이드 이미지">
+                  </li>
+                </ul>
+                <button class="modal__btn-prev">
+                  <i class="fas fa-chevron-left"></i>
+                  <span class="blind">이전 슬라이드 이동 버튼</span>
+                </button>
+                <button class="modal__btn-next">
+                  <i class="fas fa-chevron-right"></i>
+                  <span class="blind">다음 슬라이드 이동 버튼</span>
+                </button>
+              </div>
+              <!-- //modal__slide-wrap -->
+              <div class="modal__pager-wrap">
+                <!-- <button type="button">
+                  <span class="blind">첫번째 슬라이드 이미지 버튼</span>
+                </button>
+                <button type="button">
+                  <span class="blind">두번째 슬라이드 이미지 버튼</span>
+                </button>
+                <button type="button">
+                  <span class="blind">세번째 슬라이드 이미지 버튼</span>
+                </button> -->
+              </div>
+              <!-- //modal__pager-wrap -->
+              <div class="modal__control-wrap">
+                <button class="modal__btn-delete" type="button">삭제</button>
+                <button class="modal__btn-edit" type="button">수정</button>
+              </div>
+              <!-- //modal__control-wrap -->
+              <button class="modal__btn-close" type="button">
+                <img src="images/icon_close.png" alt="닫기 버튼">
+              </button>
+            </div>
+            <!-- //modal__contents-box -->
+          </div>
+          <!-- //modal -->
           <div class="main__album-pagination-wrap">
             <ul class="main__album-pagination__list">
               <li class="main__album-pagination__item">1</li>
@@ -407,6 +456,8 @@
     <!-- //content-area__inner -->
   </div>
   <!-- //user-menu-area -->
+
+  <script src="js/main.js"></script>
 </body>
 
 </html>
