@@ -1,7 +1,7 @@
 @import "variable", "mixin";
 
 
-/********** user-menu-area **********/ 
+/******************** user-menu-area ********************/ 
 .user-menu-area {
   border-bottom: 1px solid #d9e6e8;  
 
@@ -87,7 +87,7 @@
   }
 }
 
-/********** content-area **********/ 
+/******************** content-area ********************/ 
 .content-area {
   background-color: #f5f7f7;
 
@@ -98,6 +98,7 @@
   }
 }
 
+/***** header *****/
 .header {
   position: relative;
   width: 16rem;
@@ -169,7 +170,7 @@
     width: 2.4rem;
     height: 2.4rem;
     border-radius: 50%;
-    margin-right: -1rem;
+    margin-right: -.8rem;
     background: url(../images/icon_staff.svg) no-repeat;
   }
 
@@ -195,15 +196,159 @@
   }
 
   &__nav-list {
+    padding-top: 3.4rem;
     border: 1px solid #d9e6e8;
+    margin-bottom: .5rem;
     background-color: #fff;
+  }
+
+  &__nav-item-1depth:not(:last-child) {
+    padding: 0 2rem;
+    margin-bottom: 2.4rem;
+  }
+
+  &__nav-item-1depth:last-child {
+    padding: 2.1rem 2rem 2rem;
+    background-color: #fafcfc;
+  }
+
+  &__nav-1depth-text {
+    display: block;
+    margin-bottom: .8rem;
+    color: $color-primary;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    &--reservation {
+      color: #3fd2d1;
+    }
+  }
+
+  &__nav-item-2depth:not(:first-child) {
+    margin-top: .9rem;
+  }
+
+  &__nav-2depth-text {
+    display: block;
+    color: $color-primary;
+  }
+
+  &__nav-1depth-text,
+  &__nav-2depth-text {
+    &:hover {
+      color: #3fd2d1;
+    }
+  }
+}
+
+/***** main *****/
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.main {
+  width: 87rem;
+  padding: 3.2rem 0 0 3rem;
+
+  &__category-list {
+    display: flex;
+    margin: 5.2rem 0 2.7rem;
+  }
+
+  &__category-item {
+    margin-right: 2.3rem;
+
+    a {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+
+  &__category-album {
+    position: relative;
+    color: $color-primary;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 26px;
+      height: 3px;
+      background-color: #3fd2d1;
+    }
+  }
+
+  &__category-art {
+    color: #bad0d3;
+  }
+
+  &__btn-new-art-wrap {
+    margin-bottom: 2.2rem;
+    text-align: center;
+    
+    button {
+      height: 3.8rem;
+      padding-left: 5rem;
+      background: url(../images/icon_plus.png) no-repeat;
+      font-size: 2.4rem;
+      color: $color-primary;
+      cursor: pointer;
+    }
+  }
+
+  &__album-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__album-item {
+    width: calc(25% - 1.5rem);
+    margin: 0 1.5rem 1.5rem 0;
+    cursor: pointer;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    &.clicked {
+      border: 4px solid #58e5e4;
+    }
+  }
+
+  &__album-image-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__album-description-wrap {
+    height: 10rem;
+    padding: 3.2rem 1rem .9rem 1.5rem;
+    background: rgba(0, 0, 0, .7);
+    color: #fff;
+
+    p {
+      margin: .6rem 0 1.9rem;
+      color: #a2a1a0;
+    }
+  }
+
+  &__album-price-wrap {
+    display: flex;
+    justify-content: space-between;
+
+    em {
+      color: #a2a1a0;
+    }
   }
 }
 
 
-
-
-
-.main {
-  flex: 1;
-}
