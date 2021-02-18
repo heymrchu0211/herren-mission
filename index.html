@@ -413,15 +413,6 @@
               </div>
               <!-- //modal__slide-wrap -->
               <div class="modal__pager-wrap">
-                <!-- <button type="button">
-                  <span class="blind">첫번째 슬라이드 이미지 버튼</span>
-                </button>
-                <button type="button">
-                  <span class="blind">두번째 슬라이드 이미지 버튼</span>
-                </button>
-                <button type="button">
-                  <span class="blind">세번째 슬라이드 이미지 버튼</span>
-                </button> -->
               </div>
               <!-- //modal__pager-wrap -->
               <div class="modal__control-wrap">
@@ -437,13 +428,15 @@
           </div>
           <!-- //modal -->
           <div class="main__album-pagination-wrap">
+            <button class="main__album-pagination-btn-prev" type="button">
+              <i class="fa fa-caret-left"></i>
+              <span class="blind">이전 버튼</span>
+            </button>
             <ul class="main__album-pagination__list">
               <li class="main__album-pagination__item">1</li>
             </ul>
-            <button class="album-pagination__btn-prev" type="button">
-              <span class="blind">이전 버튼</span>
-            </button>
-            <button class="album-pagination__btn-next" type="button">
+            <button class="main__album-pagination-btn-next" type="button">
+              <i class="fa fa-caret-right"></i>
               <span class="blind">다음 버튼</span>
             </button>
           </div>
@@ -455,7 +448,210 @@
     </div>
     <!-- //content-area__inner -->
   </div>
-  <!-- //user-menu-area -->
+  <!-- //content-area -->
+  <div class="calendar-widget">
+    <div class="calendar-widget__status-wrap">
+      <h2>예약현황</h2>
+      <div class="calendar-widget__toggle-wrap">
+        <a class="calendar-widget__btn-toggle active" href="#toggle-tabs-1">오늘</a>
+        <a class="calendar-widget__btn-toggle" href="#toggle-tabs-2">날짜별</a>
+      </div>
+      <button class="calendar-widget__btn-close" type="button">
+        <img src="images/icon_calendar-btn-close.png" alt="캘린더 위젯 닫기 버튼">
+      </button>
+    </div>
+    <!-- //calendar-widget__status-wrap -->
+    <div class="calendar-widget__toggle-contents-wrap">
+      <div class="calendar-widget__today" id="toggle-tabs-1">
+        <ul class="calendar-widget__tabs-list">
+          <li class="calendar-widget__tabs-item">
+            <a class="calendar-widget__tabs-target active" href="#tabs-1">전체(3)</a>
+          </li>
+          <li class="calendar-widget__tabs-item">
+            <a class="calendar-widget__tabs-target" href="#tabs-2">예약(3)</a>
+          </li>
+          <li class="calendar-widget__tabs-item">
+            <a class="calendar-widget__tabs-target" href="#tabs-3">시술중(0)</a>
+          </li>
+          <li class="calendar-widget__tabs-item">
+            <a class="calendar-widget__tabs-target" href="#tabs-4">매출완료(0)</a>
+          </li>
+        </ul>
+        <!-- //calendar-widget__tabs-list -->
+        <div class="calendar-widget__all-wrap" id="tabs-1">
+          <ul class="calendar-widget__all-list">
+            <li class="calendar-widget__all-item">
+              <div class="calendar-widget__date-wrap">
+                <span class="calendar-widget__day">02.18 목</span>
+                <span class="calendar-widget__time">09:30</span>
+              </div>
+              <div class="calendar-widget__description-wrap">
+                <div class="calendar-widget__current-status-wrap">
+                  <p class="calendar-widget__customer-name">김고객(눈썹>자연 눈썹)</p>
+                  <span class="calendar-widget__reservation-status">예약완료</span>
+                  <span class="calendar-widget__reservation-manager">담당자 담당자없음</span>
+                </div>
+                <button class="calendar-widget__btn-edit">
+                  <img src="images/icon_edit-pen.png" alt="수정하기 버튼 이미지">
+                </button>
+              </div>
+            </li>
+            <li class="calendar-widget__all-item">
+              <div class="calendar-widget__date-wrap">
+                <span class="calendar-widget__day">02.18 목</span>
+                <span class="calendar-widget__time">11:30</span>
+              </div>
+              <div class="calendar-widget__description-wrap">
+                <div class="calendar-widget__current-status-wrap">
+                  <p class="calendar-widget__customer-name">윤고객(눈썹>남자 눈썹)</p>
+                  <span
+                    class="calendar-widget__reservation-status calendar-widget__reservation-status--color">예약중</span>
+                  <span class="calendar-widget__reservation-manager">담당자 테스트</span>
+                </div>
+                <button class="calendar-widget__btn-edit">
+                  <img src="images/icon_edit-pen.png" alt="수정하기 버튼 이미지">
+                </button>
+              </div>
+            </li>
+            <li class="calendar-widget__all-item">
+              <div class="calendar-widget__date-wrap">
+                <span class="calendar-widget__day">02.18 목</span>
+                <span class="calendar-widget__time">15:30</span>
+              </div>
+              <div class="calendar-widget__description-wrap">
+                <div class="calendar-widget__current-status-wrap">
+                  <p class="calendar-widget__customer-name">김고객(눈썹>자연 눈썹)</p>
+                  <span
+                    class="calendar-widget__reservation-status calendar-widget__reservation-status--color">예약중</span>
+                  <span class="calendar-widget__reservation-manager">담당자 테스트</span>
+                </div>
+                <button class="calendar-widget__btn-edit">
+                  <img src="images/icon_edit-pen.png" alt="수정하기 버튼 이미지">
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- //calendar-widget__all-wrap -->
+        <div class="calendar-widget__reservation-wrap" id="tabs-2">
+          예약 컨텐츠
+        </div>
+        <div class="calendar-widget__treatment-wrap" id="tabs-3">
+          시술중 컨텐츠
+        </div>
+        <div class="calendar-widget__complete-wrap" id="tabs-4">
+          매출완료 컨텐츠
+        </div>
+      </div>
+      <!-- //calendar-widget__today -->
+      <div id="toggle-tabs-2" class="calendar-widget__bydate">
+        <div class="calendar-widget__calendar-wrap">
+          <ul class="calendar-widget__calendar-list">
+            <li class="calendar-widget__calendar-item">
+              <span class="calendar-widget__calendar-day">월</span>
+              <span class="calendar-widget__calendar-date">1</span>
+            </li>
+            <li class="calendar-widget__calendar-item">
+              <span class="calendar-widget__calendar-day">화</span>
+              <span class="calendar-widget__calendar-date">2</span>
+            </li>
+            <li class="calendar-widget__calendar-item">
+              <span class="calendar-widget__calendar-day">수</span>
+              <span class="calendar-widget__calendar-date">3</span>
+            </li>
+            <li class="calendar-widget__calendar-item">
+              <span class="calendar-widget__calendar-day">목</span>
+              <span class="calendar-widget__calendar-date">4</span>
+            </li>
+            <li class="calendar-widget__calendar-item">
+              <span class="calendar-widget__calendar-day">금</span>
+              <span class="calendar-widget__calendar-date">5</span>
+            </li>
+          </ul>
+          <button class="calendar-widget__btn-calendar-prev" type="button">
+            <img src="images/icon_btn-calendar-prev.png" alt="캘린더 이전 버튼 이미지">
+          </button>
+          <button class="calendar-widget__btn-calendar-next" type="button">
+            <img src="images/icon_btn-calendar-prev.png" alt="캘린더 이전 버튼 이미지">
+          </button>
+        </div>
+        <!-- //calendar-widget__calendar-wrap -->
+        <div class="calendar-widget__all-wrap">
+          <ul class="calendar-widget__all-list" id="tabs-1">
+            <li class="calendar-widget__all-item">
+              <div class="calendar-widget__date-wrap">
+                <span class="calendar-widget__day">02.18 목</span>
+                <span class="calendar-widget__time">09:30</span>
+              </div>
+              <div class="calendar-widget__description-wrap">
+                <div class="calendar-widget__current-status-wrap">
+                  <p class="calendar-widget__customer-name">김고객(눈썹>자연 눈썹)</p>
+                  <span class="calendar-widget__reservation-status">예약완료</span>
+                  <span class="calendar-widget__reservation-manager">담당자 담당자없음</span>
+                </div>
+                <button class="calendar-widget__btn-edit">
+                  <img src="images/icon_edit-pen.png" alt="수정하기 버튼 이미지">
+                </button>
+              </div>
+            </li>
+            <li class="calendar-widget__all-item">
+              <div class="calendar-widget__date-wrap">
+                <span class="calendar-widget__day">02.18 목</span>
+                <span class="calendar-widget__time">11:30</span>
+              </div>
+              <div class="calendar-widget__description-wrap">
+                <div class="calendar-widget__current-status-wrap">
+                  <p class="calendar-widget__customer-name">윤고객(눈썹>남자 눈썹)</p>
+                  <span
+                    class="calendar-widget__reservation-status calendar-widget__reservation-status--color">예약중</span>
+                  <span class="calendar-widget__reservation-manager">담당자 테스트</span>
+                </div>
+                <button class="calendar-widget__btn-edit">
+                  <img src="images/icon_edit-pen.png" alt="수정하기 버튼 이미지">
+                </button>
+              </div>
+            </li>
+            <li class="calendar-widget__all-item">
+              <div class="calendar-widget__date-wrap">
+                <span class="calendar-widget__day">02.18 목</span>
+                <span class="calendar-widget__time">15:30</span>
+              </div>
+              <div class="calendar-widget__description-wrap">
+                <div class="calendar-widget__current-status-wrap">
+                  <p class="calendar-widget__customer-name">김고객(눈썹>자연 눈썹)</p>
+                  <span
+                    class="calendar-widget__reservation-status calendar-widget__reservation-status--color">예약중</span>
+                  <span class="calendar-widget__reservation-manager">담당자 테스트</span>
+                </div>
+                <button class="calendar-widget__btn-edit">
+                  <img src="images/icon_edit-pen.png" alt="수정하기 버튼 이미지">
+                </button>
+              </div>
+            </li>
+          </ul>
+          <!-- //calendar-widget__all-list -->
+        </div>
+        <!-- //calendar-widget__all-wrap -->
+      </div>
+      <!-- //calendar-widget__bydate -->
+      <div class="calendar-widget__pagination">
+        <button class="calendar-widget__btn-pagination-prev" type="button">
+          <i class="fa fa-caret-left"></i>
+        </button>
+        <ul class="calendar-widget__pagination-list">
+          <li class="calendar-widget__pagination-item">
+            <a href="">1</a>
+          </li>
+        </ul>
+        <button class="calendar-widget__btn-pagination-next" type="button">
+          <i class="fa fa-caret-right"></i>
+        </button>
+      </div>
+      <!-- //calendar-widget__pagination -->
+    </div>
+    <!-- //calendar-widget__toggle-contents-wrap -->
+  </div>
+  <!-- //calendar-widget -->
 
   <script src="js/main.js"></script>
 </body>

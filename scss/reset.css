@@ -35,4 +35,7 @@ button {
   background-color: transparent;
   cursor: pointer; }
 
+img {
+  border: 0; }
+
 /*# sourceMappingURL=reset.css.map */

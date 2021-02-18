@@ -1,4 +1,5 @@
 /******************** 상세 팝업 슬라이드 ********************/
+
 var modal = document.querySelector('.modal'); // 슬라이드 모달 최상위 요소
 var albumItem = document.querySelectorAll('.main__album-item'); // 앨범 아이템들 요소
 var btnNext = document.querySelector('.modal__btn-next'); // 다음 버튼
@@ -139,3 +140,72 @@ window.addEventListener('click', function (e) {
 });
 
 
+/******************** 달력 위젯 ********************/
+
+var widget_toggleBtn = document.querySelectorAll('.calendar-widget__btn-toggle'); // 토글 버튼
+var toggleTabs_contents = document.querySelectorAll('.calendar-widget__toggle-contents-wrap > div:not(:last-child)'); // 토글버튼을 클릭하면 보이게 될 컨텐츠 영역들
+
+// "오늘" 토글버튼 클릭시
+widget_toggleBtn[0].addEventListener('click', function (event) {
+  event.preventDefault();
+
+  if (this.parentElement.classList[1] == 'to-right') {
+
+    this.parentElement.classList.remove('to-right');
+    this.nextElementSibling.classList.remove('active');
+    this.classList.add('active');
+
+    show_tabsContents(event);
+  }
+});
+
+// "날짜별" 토글버튼 클릭시
+widget_toggleBtn[1].addEventListener('click', function (event) {
+  event.preventDefault();
+
+  if (this.parentElement.classList[0] !== 'to-right') {
+
+    this.parentElement.classList.add('to-right');
+    this.previousElementSibling.classList.remove('active');
+    this.classList.add('active');
+
+    show_tabsContents(event);
+  }
+});
+
+// 토글버튼과 쌍이 맞는 컨텐츠영역을 보이게 하는 함수 
+function show_tabsContents(event) {
+  var original_target = event.target.getAttribute('href');
+  var tab_target = original_target.replace('#', '');
+
+  for (var i = 0; i < toggleTabs_contents.length; i++) {
+    toggleTabs_contents[i].style.display = 'none';
+  }
+
+  document.getElementById(tab_target).style.display = 'block';
+}
+
+document.getElementById('toggle-tabs-1').style.display = 'block';
+
+// 탭메뉴와 쌍이 맞는 컨텐츠영역을 보이게 하는
+var widget_tabsTarget = document.querySelectorAll('.calendar-widget__tabs-target'); // taps 버튼
+var widget_tabsContents = document.querySelectorAll('.calendar-widget__today > div'); // tabs 버튼을 클릭하면 보이게 될 컨텐츠 영역들
+
+for (var i = 0; i < widget_tabsTarget.length; i++) {
+  widget_tabsTarget[i].addEventListener('click', function (event) {
+    event.preventDefault();
+
+    var original_target = event.target.getAttribute('href');
+    var tab_target = original_target.replace('#', '');
+
+    for (var i = 0; i < widget_tabsContents.length; i++) {
+      widget_tabsContents[i].style.display = 'none';
+      widget_tabsTarget[i].classList.remove('active');
+    }
+    this.classList.add('active');
+
+    document.getElementById(tab_target).style.display = 'block';
+  });
+}
+
+document.getElementById('tabs-1').style.display = 'block';
