@@ -8,7 +8,7 @@ https://heymrchu0211.github.io/herren-mission/
 
 ## 클론코딩 과정
 
-<img src="https://github.com/heymrchu0211/herren-mission/blob/main/herren_ready.jpg" width="250px">
+<img src="https://github.com/heymrchu0211/herren-mission/blob/main/herren_ready.jpg" width="600px">
 
 작업에 들어가기 앞서 전체적인 구조를 파악하고 큰 틀을 설정하기 위해서 그림을 그려보았습니다.<br>
 간략하게나마 이렇게 시각적으로 큰 틀을 잡고나니 좀 더 정돈된 생각으로 작업을 시작할 수 있어서 좋았습니다.
