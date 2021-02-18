@@ -14,8 +14,7 @@ https://heymrchu0211.github.io/herren-mission/
 간략하게나마 이렇게 시각적으로 큰 틀을 잡고나니 좀 더 정돈된 생각으로 작업을 시작할 수 있어서 좋았습니다.
 
 기존 사이트를 확인해보니 float과 inline-block을 사용하여 레이아웃 조정이 되어 있었는데요.<br> 
-클론코딩을 할때는 flex를 사용하여 레이아웃을 조정 했습니다. 때문에 브라우저 호환성은 Internet Explore 10 이상부터 입니다.<br>
-float과 inline-block을 사용할수 있었지만 flex를 사용한 이유는  특별한 이유는 없었고 사전질문 내용에 브라우저 호환성에 대한 구체적인 지시사항은 없어서 flex를 사용해 보았습니다.<br>  
+클론코딩을 할때는 flex를 사용하여 레이아웃을 조정 했습니다. 때문에 브라우저 호환성은 Internet Explore 10 이상부터 입니다. float과 inline-block을 사용할수 있었지만 flex를 사용한 이유는  특별한 이유는 없었고 사전질문 내용에 브라우저 호환성에 대한 구체적인 지시사항은 없어서 flex를 사용해 보았습니다.
 flex를 사용할 수 없는 환경이라면 float과 inline-block을 사용할 수 있습니다.
 
 반복되는 스타일들을 common.scss, mixin.scss, variable.scss파일에 모아두려고 했습니다.<br> 
@@ -50,7 +49,7 @@ https://ko.javascript.info/<br>
 https://poiemaweb.com/
 
 
-
+`소중한 시간 내어 저의 작업물을 열람해주셔서 감사합니다.`
 
 
 
