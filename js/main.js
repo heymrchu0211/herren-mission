@@ -187,7 +187,7 @@ function show_tabsContents(event) {
 
 document.getElementById('toggle-tabs-1').style.display = 'block';
 
-// 탭메뉴와 쌍이 맞는 컨텐츠영역을 보이게 하는
+// 탭메뉴와 쌍이 맞는 컨텐츠영역을 보이게 하기
 var widget_tabsTarget = document.querySelectorAll('.calendar-widget__tabs-target'); // taps 버튼
 var widget_tabsContents = document.querySelectorAll('.calendar-widget__today > div'); // tabs 버튼을 클릭하면 보이게 될 컨텐츠 영역들
 
