@@ -89,6 +89,16 @@ function prevSlide() {
 // 3초마다 다음 슬라이드로 이동
 var autoSlide = setInterval(nextSlide, 3000);
 
+// 슬라이드 모달창 박스안에 마우스가 들어오면 실행되고 있었던 오토슬라이드를 멈춤
+slideWrap.parentElement.addEventListener('mouseenter', function () {
+  clearInterval(autoSlide);
+});
+
+// 마우스가 슬라이드 모달창 박스 밖으로 나가면 다시 오토슬라이드를 실행
+slideWrap.parentElement.addEventListener('mouseleave', function () {
+  autoSlide = setInterval(nextSlide, 3000);
+});
+
 // 다음버튼 클릭시 다음 슬라이드로 이동
 btnNext.addEventListener('click', function () {
   nextSlide();
