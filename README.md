@@ -41,7 +41,7 @@ html은 BEM방법론을 사용하여 작성하였습니다. BEM이라는 것은 
 **초기화**<br>
 reset파일에 초기화 할 스타일들을 작성 하였습니다. 여기서 초기화라는 것은 브라우저들이 기본값으로서 제공하는 스타일들을 제거하여 초기세팅을 하는 것을 의미합니다. 기본값을 제거하는 이유는 그 기본값들이 불필요하거나 또는 브라우저마다 다른 형태로 표현되기 때문인데요. 예를 들어, li요소는 아래 이미지처럼 앞에 검은색 점박이 모양의 dot이 있습니다. 하지만 일반적으로 이 dot은 보이지 않도록 감춰야 하는 경우가 많습니다. 그래서 list-style이라는 속성의 값을 none으로 처리합니다.
 
-![ie예시 이미지](https://github.com/heymrchu0211/herren-mission/blob/main/image-dot.png)
+![dot예시 이미지](https://github.com/heymrchu0211/herren-mission/blob/main/img-dot.png)
 
 또 한가지 예를 들자면, Internet Explorer에서 img 요소가 a요소의 자식으로 있는 경우에 아래 이미지처럼 img요소에 border가 생기게 됩니다. 크롬이나 파이어폭스 등 타 브라우저에서는 그렇지 않은데 Internet Explorer에서만 이런 현상이 나타납니다. 이 border는 일반적으로 불필요 합니다. 그래서 이 현상을 막기 위해 border속성의 값을 0을 주는 것입니다.
 
